@@ -1,47 +1,56 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MigrantPlus — Главная</title>
+    <title>MigrantPlus</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Шапка сайта -->
-    <header>
-        <div class="container">
-            <h1 class="logo">MigrantPlus</h1>
-            <nav>
-                <a href="#about">О проекте</a>
-                <a href="#services">Услуги</a>
-                <a href="#contact">Контакты</a>
+    <div class="background-overlay"></div>
+
+    <main class="wrapper">
+        <header class="card">
+            <div class="logo-icon">✦</div>
+            <h1>MIGRANTPLUS</h1>
+            <p class="subtitle">Independent digital platform & services</p>
+
+            <nav class="links-grid">
+                <a href="#about" class="nav-btn">About</a>
+                <a href="#services" class="nav-btn">Services</a>
+                <a href="#tools" class="nav-btn">Tools</a>
+                <a href="#contact" class="nav-btn">Contact</a>
             </nav>
-        </div>
-    </header>
+        </header>
 
-    <!-- Главный блок (Hero) -->
-    <section class="hero">
-        <div class="container">
-            <h2>Полезные решения и сервисы</h2>
-            <p>Современный независимый проект без навязчивой рекламы и платных подписок.</p>
-            <a href="#contact" class="btn">Связаться</a>
-        </div>
-    </section>
+        <!-- Content Sections -->
+        <section id="about" class="content-block">
+            <h2>About Us</h2>
+            <p>MigrantPlus is a clean, fast, and reliable resource built without intrusive ads, paid subscriptions, or unnecessary noise.</p>
+        </section>
 
-    <!-- Блок «О проекте» -->
-    <section id="about" class="section">
-        <div class="container">
-            <h3>О нас</h3>
-            <p>Здесь вы можете разместить описание вашего проекта, портфолио, полезные статьи или инструменты.</p>
-        </div>
-    </section>
+        <section id="services" class="content-block">
+            <h2>Services & Features</h2>
+            <ul>
+                <li>Useful guides and documentation</li>
+                <li>Automated tools and trackers</li>
+                <li>Direct support and consultations</li>
+            </ul>
+        </section>
 
-    <!-- Подвал -->
+        <section id="contact" class="content-block">
+            <h2>Get in Touch</h2>
+            <p>Have any questions or suggestions? Reach out to us directly.</p>
+            <a href="mailto:info@migrantplus.pro" class="contact-btn">info@migrantplus.pro</a>
+        </section>
+    </main>
+
     <footer>
-        <div class="container">
-            <p>&copy; 2026 MigrantPlus. Все права защищены.</p>
-        </div>
+        <p>&copy; 2026 MIGRANTPLUS. All rights reserved. Designed in HTML5 UP Style.</p>
     </footer>
 
 </body>
