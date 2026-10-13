@@ -58,7 +58,7 @@
             <nav class="links-grid">
                 <a href="#about" class="nav-btn">About</a>
                 <a href="#services" class="nav-btn">Services</a>
-                <a href="#tools" class="nav-btn">Tools</a>
+                <a href="#what-we-do" class="nav-btn">What We Do</a>
                 <a href="#contact" class="nav-btn">Contact</a>
             </nav>
         </header>
@@ -87,7 +87,7 @@
         </section>
 
         <!-- Блок 3: What We Do -->
-        <section class="content-block accordion-block">
+        <section id="what-we-do" class="content-block accordion-block">
             <h2 class="accordion-header">What We Do</h2>
             <div class="accordion-content">
                 <ul>
@@ -104,6 +104,12 @@
             <p>Have any questions or suggestions? Reach out to us directly.</p>
             
             <div class="contact-methods">
+                <a href="https://www.facebook.com/share/1Djz8AxdP7/?mibextid=wwXIfr" class="contact-link" target="_blank">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
+                
+                <br>
+
                 <a href="mailto:migrantplus.pro@gmail.com" class="contact-link">
                     <i class="fas fa-envelope"></i> migrantplus.pro@gmail.com
                 </a>
@@ -136,6 +142,30 @@
                 // Если кликнули по закрытому — открываем его
                 if (!isAlreadyActive) {
                     currentBlock.classList.add('active');
+                }
+            });
+        });
+
+        // Обработка нажатий на верхние кнопки меню
+        document.querySelectorAll('.nav-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = btn.getAttribute('href').substring(1);
+                const targetBlock = document.getElementById(targetId);
+
+                if (targetBlock) {
+                    // Закрываем все аккордеоны
+                    document.querySelectorAll('.accordion-block').forEach(block => {
+                        block.classList.remove('active');
+                    });
+
+                    // Если целевой блок является аккордеоном (About, Services, What We Do), открываем его
+                    if (targetBlock.classList.contains('accordion-block')) {
+                        targetBlock.classList.add('active');
+                    }
+
+                    // Плавно скроллим к блоку
+                    targetBlock.scrollIntoView({ behavior: 'smooth' });
                 }
             });
         });
