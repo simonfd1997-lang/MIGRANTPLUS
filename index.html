@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MigrantPlus</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Библиотека иконок Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Интерактивные кликабельные заголовки аккордеона */
+        .accordion-header {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+
+        .accordion-header::after {
+            content: "✦";
+            font-size: 14px;
+            color: #38bdf8;
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-block.active .accordion-header::after {
+            transform: rotate(90deg);
+        }
+
+        /* По умолчанию контент скрыт */
+        .accordion-content {
+            display: none;
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* При активации покажем контент */
+        .accordion-block.active .accordion-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-overlay"></div>
+
+    <main class="wrapper">
+        <header class="card">
+            <div class="logo-icon">✦</div>
+            <h1>MIGRANTPLUS</h1>
+            <p class="subtitle">Independent digital platform & services</p>
+
+            <nav class="links-grid">
+                <a href="#about" class="nav-btn">About</a>
+                <a href="#services" class="nav-btn">Services</a>
+                <a href="#tools" class="nav-btn">Tools</a>
+                <a href="#contact" class="nav-btn">Contact</a>
+            </nav>
+        </header>
+
+        <!-- Блок 1: About Us -->
+        <section id="about" class="content-block accordion-block">
+            <h2 class="accordion-header">About Us</h2>
+            <div class="accordion-content">
+                <p>At Migrantplus, we are a leading cross-border mobility and legal advisory firm with an extensive presence across Latin America. We specialize in comprehensive immigration solutions, visa facilitation, and regulatory compliance for individuals, families, and businesses navigating global transitions.</p>
+            </div>
+        </section>
+
+        <!-- Блок 2: Why Choose Us -->
+        <section class="content-block accordion-block">
+            <h2 class="accordion-header">Why Choose Us</h2>
+            <div class="accordion-content">
+                <ul>
+                    <li><strong>Legal & Regulatory Compliance:</strong> We strictly adhere to immigration frameworks to minimize risk and optimize processing timelines.</li>
+                    <li><strong>Regional Expertise & Local Reach:</strong> Our extensive on-the-ground team across Latin America ensures seamless support at every jurisdictional level.</li>
+                    <li><strong>End-to-End Representation:</strong> From initial eligibility assessment to post-arrival integration, we manage every stage of your legal journey.</li>
+                    <li><strong>Proven Record of Success:</strong> Trusted by international clients for complex visa adjudications, family reunifications, and residency pathways.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Блок 3: What We Do -->
+        <section id="services" class="content-block accordion-block">
+            <h2 class="accordion-header">What We Do</h2>
+            <div class="accordion-content">
+                <ul>
+                    <li><strong>Consular & Visa Services:</strong> End-to-end support for U.S., Canadian, Mexican, and Latin American visas (Tourist, Work, Student, Family Reunification, and Medical/Childbirth).</li>
+                    <li><strong>Residency & Naturalization:</strong> Guiding clients through permanent residency, citizenship applications, and lawful status acquisition.</li>
+                    <li><strong>Relocation & Ancillary Support:</strong> Full concierge oversight, including legal entry clearance, document legalization, and post-arrival integration services.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Секция контактов (всегда открыта) -->
+        <section id="contact" class="content-block">
+            <h2>Get in Touch</h2>
+            <p>Have any questions or suggestions? Reach out to us directly.</p>
+            
+            <div class="contact-methods">
+                <a href="mailto:migrantplus.pro@gmail.com" class="contact-link">
+                    <i class="fas fa-envelope"></i> migrantplus.pro@gmail.com
+                </a>
+                
+                <br>
+
+                <a href="https://wa.me/523318880050" class="contact-link" target="_blank">
+                    <i class="fab fa-whatsapp"></i> +523318880050
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 MIGRANTPLUS. All rights reserved. Designed in HTML5 UP Style.</p>
+    </footer>
+
+    <!-- Скрипт для переключения аккордеона -->
+    <script>
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const currentBlock = header.parentElement;
+                const isAlreadyActive = currentBlock.classList.contains('active');
+
+                // Закрываем все открытые блоки
+                document.querySelectorAll('.accordion-block').forEach(block => {
+                    block.classList.remove('active');
+                });
+
+                // Если кликнули по закрытому — открываем его
+                if (!isAlreadyActive) {
+                    currentBlock.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
