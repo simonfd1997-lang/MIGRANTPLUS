@@ -58,7 +58,7 @@
             <nav class="links-grid">
                 <a href="#about" class="nav-btn">About</a>
                 <a href="#services" class="nav-btn">Services</a>
-                <a href="#what-we-do" class="nav-btn">What We Do</a>
+                <a href="#tools" class="nav-btn">Tools</a>
                 <a href="#contact" class="nav-btn">Contact</a>
             </nav>
         </header>
@@ -71,7 +71,7 @@
             </div>
         </section>
 
-        <!-- Блок 2: Services -->
+        <!-- Блок 2: Services (переименован из Why Choose Us) -->
         <section id="services" class="content-block accordion-block">
             <h2 class="accordion-header">Services</h2>
             <div class="accordion-content">
@@ -87,7 +87,7 @@
         </section>
 
         <!-- Блок 3: What We Do -->
-        <section id="what-we-do" class="content-block accordion-block">
+        <section class="content-block accordion-block">
             <h2 class="accordion-header">What We Do</h2>
             <div class="accordion-content">
                 <ul>
@@ -96,3 +96,50 @@
                     <li><strong>Relocation & Ancillary Support:</strong> Full concierge oversight, including legal entry clearance, document legalization, and post-arrival integration services.</li>
                 </ul>
             </div>
+        </section>
+
+        <!-- Секция контактов (всегда открыта) -->
+        <section id="contact" class="content-block">
+            <h2>Get in Touch</h2>
+            <p>Have any questions or suggestions? Reach out to us directly.</p>
+            
+            <div class="contact-methods">
+                <a href="mailto:migrantplus.pro@gmail.com" class="contact-link">
+                    <i class="fas fa-envelope"></i> migrantplus.pro@gmail.com
+                </a>
+                
+                <br>
+
+                <a href="https://wa.me/523318880050" class="contact-link" target="_blank">
+                    <i class="fab fa-whatsapp"></i> +523318880050
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 MIGRANTPLUS. All rights reserved. Designed in HTML5 UP Style.</p>
+    </footer>
+
+    <!-- Скрипт для переключения аккордеона -->
+    <script>
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const currentBlock = header.parentElement;
+                const isAlreadyActive = currentBlock.classList.contains('active');
+
+                // Закрываем все открытые блоки
+                document.querySelectorAll('.accordion-block').forEach(block => {
+                    block.classList.remove('active');
+                });
+
+                // Если кликнули по закрытому — открываем его
+                if (!isAlreadyActive) {
+                    currentBlock.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
