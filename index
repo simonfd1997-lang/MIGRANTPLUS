@@ -8,8 +8,42 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Добавлена библиотека иконок Font Awesome -->
+    <!-- Библиотека иконок Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Интерактивные кликабельные заголовки аккордеона */
+        .accordion-header {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+
+        .accordion-header::after {
+            content: "✦";
+            font-size: 14px;
+            color: #38bdf8;
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-block.active .accordion-header::after {
+            transform: rotate(90deg);
+        }
+
+        /* По умолчанию контент скрыт */
+        .accordion-content {
+            display: none;
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* При активации покажем контент */
+        .accordion-block.active .accordion-content {
+            display: block;
+        }
+    </style>
 </head>
 <body>
 
@@ -23,46 +57,59 @@
 
             <nav class="links-grid">
                 <a href="#about" class="nav-btn">About</a>
-                <a href="#Services" class="nav-btn">Services</a>
-                <a href="#what we do" class="nav-btn"what we do</a>
+                <a href="#services" class="nav-btn">Services</a>
+                <a href="#tools" class="nav-btn">Tools</a>
                 <a href="#contact" class="nav-btn">Contact</a>
             </nav>
         </header>
 
-        <!-- Content Sections -->
-        <section id="about" class="content-block">
-            <h2>About Us</h2>
-            <p>At Migrantplus, we pride ourselves on maintaining an extensive, highly qualified network of professionals strategically positioned across Latin America. Our dedicated regional teams bring deep local expertise and comprehensive jurisdictional insight to every case we handle.
-We offer full-spectrum, end-to-end management for individuals and families relocating or expanding their presence across the region. Our comprehensive advisory and support services cover every stage of the transition, including:
-Entry and Immigration Compliance: Securing all necessary pre-arrival permits, visas, and lawful entry documentation.
-Naturalization and Residency: Guiding clients through complex immigration pathways, permanent residency applications, and citizenship acquisition processes.
-Concierge and Ancillary Support: Overseeing an extensive range of supplementary post-arrival and integration services tailored to our clients' unique personal and professional needs.
-By combining rigorous legal oversight with a robust on-the-ground infrastructure throughout Latin America, we ensure a seamless, secure, and fully compliant experience for every client we serve.</p>
+        <!-- Блок 1: About Us (открыт по умолчанию) -->
+        <section id="about" class="content-block accordion-block active">
+            <h2 class="accordion-header">About Us</h2>
+            <div class="accordion-content">
+                <p>At Migrantplus, we are a leading cross-border mobility and legal advisory firm with an extensive presence across Latin America. We specialize in comprehensive immigration solutions, visa facilitation, and regulatory compliance for individuals, families, and businesses navigating global transitions.</p>
+            </div>
         </section>
 
-        <section id="services" class="content-block">
-            <h2>Services & Features</h2>
-            <ul>
-                <li>Useful guides and documentation</li>
-                <li>Automated tools and trackers</li>
-                <li>Direct support and consultations</li>
-            </ul>
+        <!-- Блок 2: Services (переименован из Why Choose Us) -->
+        <section id="services" class="content-block accordion-block">
+            <h2 class="accordion-header">Services</h2>
+            <div class="accordion-content">
+                <p>At Migrantplus, we pride ourselves on maintaining an extensive, highly qualified network of professionals strategically positioned across Latin America. Our dedicated regional teams bring deep local expertise and comprehensive jurisdictional insight to every case we handle.</p>
+                <p style="margin-top: 10px;">We offer full-spectrum, end-to-end management for individuals and families relocating or expanding their presence across the region. Our comprehensive advisory and support services cover every stage of the transition, including:</p>
+                <ul style="margin-top: 10px;">
+                    <li><strong>Entry and Immigration Compliance:</strong> Securing all necessary pre-arrival permits, visas, and lawful entry documentation.</li>
+                    <li><strong>Naturalization and Residency:</strong> Guiding clients through complex immigration pathways, permanent residency applications, and citizenship acquisition processes.</li>
+                    <li><strong>Concierge and Ancillary Support:</strong> Overseeing an extensive range of supplementary post-arrival and integration services tailored to our clients' unique personal and professional needs.</li>
+                </ul>
+                <p style="margin-top: 10px;">By combining rigorous legal oversight with a robust on-the-ground infrastructure throughout Latin America, we ensure a seamless, secure, and fully compliant experience for every client we serve.</p>
+            </div>
         </section>
 
-        <!-- Обновленная секция контактов -->
+        <!-- Блок 3: What We Do -->
+        <section class="content-block accordion-block">
+            <h2 class="accordion-header">What We Do</h2>
+            <div class="accordion-content">
+                <ul>
+                    <li><strong>Consular & Visa Services:</strong> End-to-end support for U.S., Canadian, Mexican, and Latin American visas (Tourist, Work, Student, Family Reunification, and Medical/Childbirth).</li>
+                    <li><strong>Residency & Naturalization:</strong> Guiding clients through permanent residency, citizenship applications, and lawful status acquisition.</li>
+                    <li><strong>Relocation & Ancillary Support:</strong> Full concierge oversight, including legal entry clearance, document legalization, and post-arrival integration services.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Секция контактов (всегда открыта) -->
         <section id="contact" class="content-block">
             <h2>Get in Touch</h2>
             <p>Have any questions or suggestions? Reach out to us directly.</p>
             
             <div class="contact-methods">
-                <!-- Почта с иконкой и рабочей ссылкой -->
                 <a href="mailto:migrantplus.pro@gmail.com" class="contact-link">
                     <i class="fas fa-envelope"></i> migrantplus.pro@gmail.com
                 </a>
                 
-                <br> <!-- Перенос строки -->
+                <br>
 
-                <!-- WhatsApp с иконкой и рабочей ссылкой -->
                 <a href="https://wa.me/523318880050" class="contact-link" target="_blank">
                     <i class="fab fa-whatsapp"></i> +523318880050
                 </a>
@@ -71,4 +118,28 @@ By combining rigorous legal oversight with a robust on-the-ground infrastructure
     </main>
 
     <footer>
-        <p>&copy; 2026 MIGRANTPLUS.
+        <p>&copy; 2026 MIGRANTPLUS. All rights reserved. Designed in HTML5 UP Style.</p>
+    </footer>
+
+    <!-- Скрипт для переключения аккордеона -->
+    <script>
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const currentBlock = header.parentElement;
+                const isAlreadyActive = currentBlock.classList.contains('active');
+
+                // Закрываем все открытые блоки
+                document.querySelectorAll('.accordion-block').forEach(block => {
+                    block.classList.remove('active');
+                });
+
+                // Если кликнули по закрытому — открываем его
+                if (!isAlreadyActive) {
+                    currentBlock.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
