@@ -59,22 +59,21 @@
         <header class="card">
             <div class="logo-icon">✦</div>
             <h1>MIGRANTPLUS</h1>
-            <p class="subtitle" data-en="Independent digital platform & services" data-es="Plataforma digital independiente y servicios">Independent digital platform & services</p>
+            <p class="subtitle">Independent digital platform & services</p>
 
             <nav class="links-grid">
-                <a href="#about" class="nav-btn" data-en="About" data-es="Acerca de">About</a>
-                <a href="#services" class="nav-btn" data-en="Services" data-es="Servicios">Services</a>
-                <a href="#what-we-do" class="nav-btn" data-en="What We Do" data-es="Qué hacemos">What We Do</a>
-                <a href="#contact" class="nav-btn" data-en="Contact" data-es="Contacto">Contact</a>
+                <a href="#about" class="nav-btn">About</a>
+                <a href="#services" class="nav-btn">Services</a>
+                <a href="#what-we-do" class="nav-btn">What We Do</a>
+                <a href="#contact" class="nav-btn">Contact</a>
             </nav>
         </header>
 
         <!-- Блок 1: About Us (открыт по умолчанию) -->
         <section id="about" class="content-block accordion-block active">
-            <h2 class="accordion-header" data-en="About Us" data-es="Sobre nosotros">About Us</h2>
+            <h2 class="accordion-header">About Us</h2>
             <div class="accordion-content">
-                <p data-en="At Migrantplus, we are a leading cross-border mobility and legal advisory firm with an extensive presence across Latin America. We specialize in comprehensive immigration solutions, visa facilitation, and regulatory compliance for individuals, families, and businesses navigating global transitions."
-                   data-es="En Migrantplus somos una firma líder de asesoría legal y movilidad transfronteriza con amplia presencia en América Latina. Nos especializamos en soluciones migratorias integrales, facilitación de visas y cumplimiento normativo.">
+                <p>
                    At Migrantplus, we are a leading cross-border mobility and legal advisory firm with an extensive presence across Latin America. We specialize in comprehensive immigration solutions, visa facilitation, and regulatory compliance for individuals, families, and businesses navigating global transitions.
                 </p>
             </div>
@@ -82,22 +81,31 @@
 
         <!-- Блок 2: Services -->
         <section id="services" class="content-block accordion-block">
-            <h2 class="accordion-header" data-en="Services" data-es="Servicios">Services</h2>
+            <h2 class="accordion-header">Services</h2>
             <div class="accordion-content">
-                <p data-en="At Migrantplus, we pride ourselves on maintaining an extensive, highly qualified network of professionals strategically positioned across Latin America. Our dedicated regional teams bring deep local expertise and comprehensive jurisdictional insight to every case we handle."
-                   data-es="En Migrantplus nos enorgullecemos de mantener una red extensa y altamente calificada de profesionales ubicados estratégicamente en América Latina.">
-                   At Migrantplus, we pride ourselves on maintaining an extensive, highly qualified network of professionals strategically positioned across Latin America. Our dedicated regional teams bring deep local expertise and comprehensive jurisdictional insight to every case we handle.
-                </p>
+                <p>At Migrantplus, we provide comprehensive legal guidance and end-to-end representation for international mobility, specializing in consular processing and visa acquisition for the United States, Canada, and Mexico. Our regional experts ensure strict regulatory compliance and strategic preparation at every stage of your application.</p>
+
+                <p>Our practice covers a full spectrum of visa categories, tailored to your specific personal, professional, and medical needs:</p>
+
+                <ul>
+                    <li><strong>Visitor & Tourism Visas (B1/B2, Temporary Resident Visas):</strong> Comprehensive application support for leisure travel, business exploratory trips, and short-term visits to the U.S., Canada, and Mexico.</li>
+                    <li><strong>Study & Academic Visas (F-1, M-1, Study Permits):</strong> Strategic advisory for international students enrolling in accredited educational institutions, language programs, and vocational training.</li>
+                    <li><strong>Family-Based & Marriage Visas:</strong> Legal facilitation for spouses, fiancés(es), and family-sponsored immigration pathways, ensuring proper evidentiary compliance for marital and dependent unions.</li>
+                    <li><strong>Family Reunification Programs:</strong> Specialized legal frameworks designed to reunite families across international borders through authorized sponsorship and relative petition channels.</li>
+                    <li><strong>Employment & Work Visas (Temporary Work Permits, Professional Visas):</strong> Representation for corporate transferees, skilled professionals, and sponsored employment classifications to secure lawful authorization to work abroad.</li>
+                    <li><strong>Medical Treatment & Childbirth Visas:</strong> Dedicated legal and advisory support for patients seeking specialized medical care, diagnostics, or surgical procedures abroad, alongside comprehensive visa assistance for planned childbirth and medical tourism in foreign clinics, including coordination with authorized healthcare providers.</li>
+                </ul>
+
+                <p>Through meticulous document preparation, interview coaching, and adherence to immigration law, we mitigate compliance risks and maximize the probability of a favorable adjudication.</p>
             </div>
         </section>
 
         <!-- Блок 3: What We Do -->
         <section id="what-we-do" class="content-block accordion-block">
-            <h2 class="accordion-header" data-en="What We Do" data-es="Qué hacemos">What We Do</h2>
+            <h2 class="accordion-header">What We Do</h2>
             <div class="accordion-content">
                 <ul>
-                    <li data-en="Consular & Visa Services: End-to-end support for U.S., Canadian, Mexican, and Latin American visas."
-                        data-es="Servicios consulares y de visas: Soporte integral para visas de EE. UU., Canadá, México y América Latina.">
+                    <li>
                         <strong>Consular & Visa Services:</strong> End-to-end support for U.S., Canadian, Mexican, and Latin American visas (Tourist, Work, Student, Family Reunification, and Medical/Childbirth).
                     </li>
                 </ul>
@@ -106,20 +114,20 @@
 
         <!-- Секция контактов -->
         <section id="contact" class="content-block">
-            <h2 data-en="Get in Touch" data-es="Ponte en contacto">Get in Touch</h2>
-            <p data-en="Have any questions or suggestions? Reach out to us directly." data-es="¿Tienes alguna pregunta o sugerencia? Contáctanos directamente.">Have any questions or suggestions? Reach out to us directly.</p>
-            
+            <h2>Get in Touch</h2>
+            <p>Have any questions or suggestions? Reach out to us directly.</p>
+
             <div class="contact-methods">
                 <a href="https://www.facebook.com/share/1Djz8AxdP7/?mibextid=wwXIfr" class="contact-link" target="_blank">
                     <i class="fab fa-facebook"></i> Facebook
                 </a>
-                
+
                 <br>
 
                 <a href="mailto:migrantplus.pro@gmail.com" class="contact-link">
                     <i class="fas fa-envelope"></i> migrantplus.pro@gmail.com
                 </a>
-                
+
                 <br>
 
                 <a href="https://wa.me/523318880050" class="contact-link" target="_blank">
@@ -133,7 +141,7 @@
         <p>&copy; 2026 MIGRANTPLUS. All rights reserved. Designed in HTML5 UP Style.</p>
     </footer>
 
-    <!-- Скрипт аккордеона и автоопределения языка по IP -->
+    <!-- Скрипт аккордеона -->
     <script>
         document.querySelectorAll('.accordion-header').forEach(header => {
             header.addEventListener('click', () => {
@@ -169,34 +177,6 @@
                 }
             });
         });
-
-        // Автоопределение языка по IP
-        async function detectLanguageByIP() {
-            try {
-                // Запрос к бесплатному API для определения страны по IP
-                let response = await fetch('https://ipapi.co/json/');
-                let data = await response.json();
-                
-                // Список испаноязычных стран (код страны по стандарту ISO)
-                const spanishSpeakingCountries = ['MX', 'ES', 'AR', 'CO', 'CL', 'PE', 'VE', 'EC', 'GT', 'CU', 'BO', 'DO', 'HN', 'PY', 'SV', 'NI', 'CR', 'PA', 'UY'];
-                
-                let userLang = 'en'; // по умолчанию английский
-                if (data && data.country_code && spanishSpeakingCountries.includes(data.country_code)) {
-                    userLang = 'es'; // если страна из списка, переключаем на испанский
-                }
-
-                // Применяем выбранный язык к элементам с атрибутами data-en / data-es
-                document.querySelectorAll('[data-' + userLang + ']').forEach(el => {
-                    el.textContent = el.getAttribute('data-' + userLang);
-                });
-            } catch (error) {
-                // Если не удалось определить IP (например, блокирует блокировщик рекламы), по умолчанию останется английский
-                console.log('IP geolocation failed, defaulting to English.');
-            }
-        }
-
-        // Запуск проверки при загрузке страницы
-        window.addEventListener('DOMContentLoaded', detectLanguageByIP);
     </script>
 
 </body>
