@@ -1,27 +1,162 @@
-/* Дополнительные стили для контактов */
-.contact-methods {
-    margin-top: 15px;
+/* HTML5 UP Style Theme - MigrantPlus (Fixed for PC & Mobile) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.contact-link {
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Центрирование по вертикали на ПК */
+    padding: 40px 20px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Background Gradient Overlay */
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 30%, #1e293b 0%, #0f172a 70%);
+    z-index: -1;
+}
+
+/* Общий контейнер теперь адаптивный и центрированный */
+.wrapper {
+    width: 100%;
+    max-width: 650px; /* Идеальная ширина для чтения на любых экранах */
+    margin: 0 auto;
+}
+
+/* Главная карточка */
+.card {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 50px 40px;
+    text-align: center;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    margin-bottom: 25px;
+}
+
+.logo-icon {
+    font-size: 36px;
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.subtitle {
+    font-size: 15px;
+    color: #94a3b8;
+    margin-bottom: 35px;
+    font-weight: 300;
+}
+
+/* Navigation Grid */
+.links-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.nav-btn {
+    display: block;
+    padding: 14px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #f1f5f9;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.25s ease;
+}
+
+.nav-btn:hover {
+    background: rgba(56, 189, 248, 0.15);
+    border-color: #38bdf8;
+    color: #38bdf8;
+    transform: translateY(-3px);
+}
+
+/* Content Blocks */
+.content-block {
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.content-block h2 {
+    font-size: 20px;
+    color: #38bdf8;
+    margin-bottom: 12px;
+}
+
+.content-block p, .content-block ul {
+    font-size: 15px;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.content-block ul {
+    list-style-position: inside;
+}
+
+.contact-btn {
     display: inline-block;
+    margin-top: 10px;
     color: #38bdf8;
     text-decoration: none;
     font-weight: 600;
-    margin-bottom: 10px; /* Отступ между почтой и WhatsApp */
-    font-size: 15px;
 }
 
-.contact-link:hover {
+.contact-btn:hover {
     text-decoration: underline;
 }
 
-.contact-link i {
-    margin-right: 8px; /* Отступ от иконки до текста */
-    font-size: 1.1em;
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 13px;
+    color: #64748b;
+    margin-top: 20px;
 }
 
-/* Изменение цвета иконки WhatsApp на брендовый */
-.fa-whatsapp {
-    color: #25D366;
+/* Адаптивность для узких экранов телефонов */
+@media (max-width: 480px) {
+    .card {
+        padding: 30px 20px;
+    }
+    
+    h1 {
+        font-size: 24px;
+        letter-spacing: 2px;
+    }
+
+    .links-grid {
+        grid-template-columns: 1fr; /* На очень узких экранах кнопки в один столбец */
+    }
 }
