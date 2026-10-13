@@ -98,23 +98,21 @@
             </div>
         </section>
 
-        <!-- Секция контактов -->
-        <section id="contact" class="content-block accordion-block">
-            <h2 class="accordion-header">Get in Touch</h2>
-            <div class="accordion-content">
-                <p>Have any questions or suggestions? Reach out to us directly.</p>
+        <!-- Секция контактов (всегда открыта) -->
+        <section id="contact" class="content-block">
+            <h2>Get in Touch</h2>
+            <p>Have any questions or suggestions? Reach out to us directly.</p>
+            
+            <div class="contact-methods">
+                <a href="mailto:migrantplus.pro@gmail.com" class="contact-link">
+                    <i class="fas fa-envelope"></i> migrantplus.pro@gmail.com
+                </a>
                 
-                <div class="contact-methods" style="margin-top: 15px;">
-                    <a href="mailto:migrantplus.pro@gmail.com" class="contact-link">
-                        <i class="fas fa-envelope"></i> migrantplus.pro@gmail.com
-                    </a>
-                    
-                    <br><br>
+                <br>
 
-                    <a href="https://wa.me/523318880050" class="contact-link" target="_blank">
-                        <i class="fab fa-whatsapp"></i> +523318880050
-                    </a>
-                </div>
+                <a href="https://wa.me/523318880050" class="contact-link" target="_blank">
+                    <i class="fab fa-whatsapp"></i> +523318880050
+                </a>
             </div>
         </section>
     </main>
@@ -123,7 +121,7 @@
         <p>&copy; 2026 MIGRANTPLUS. All rights reserved. Designed in HTML5 UP Style.</p>
     </footer>
 
-    <!-- Скрипт для переключения аккордеона и навигации по кнопкам -->
+    <!-- Скрипт для переключения аккордеона -->
     <script>
         document.querySelectorAll('.accordion-header').forEach(header => {
             header.addEventListener('click', () => {
@@ -150,13 +148,11 @@
                 const targetBlock = document.getElementById(targetId);
 
                 if (targetBlock) {
-                    // Закрываем все блоки
-                    document.querySelectorAll('.accordion-block').forEach(block => {
-                        block.classList.remove('active');
-                    });
-
-                    // Открываем целевой блок (если это аккордеон)
+                    // Если целевой блок является аккордеоном, закрываем остальные аккордеоны и открываем этот
                     if (targetBlock.classList.contains('accordion-block')) {
+                        document.querySelectorAll('.accordion-block').forEach(block => {
+                            block.classList.remove('active');
+                        });
                         targetBlock.classList.add('active');
                     }
 
