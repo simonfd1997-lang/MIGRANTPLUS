@@ -148,11 +148,13 @@
                 const targetBlock = document.getElementById(targetId);
 
                 if (targetBlock) {
-                    // Если целевой блок является аккордеоном, закрываем остальные аккордеоны и открываем этот
+                    // Закрываем все аккордеоны
+                    document.querySelectorAll('.accordion-block').forEach(block => {
+                        block.classList.remove('active');
+                    });
+
+                    // Если целевой блок является аккордеоном (About, Services, What We Do), открываем его
                     if (targetBlock.classList.contains('accordion-block')) {
-                        document.querySelectorAll('.accordion-block').forEach(block => {
-                            block.classList.remove('active');
-                        });
                         targetBlock.classList.add('active');
                     }
 
