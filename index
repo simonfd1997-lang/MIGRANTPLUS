@@ -23,8 +23,8 @@
 
             <nav class="links-grid">
                 <a href="#about" class="nav-btn">About</a>
-                <a href="#services" class="nav-btn">Services</a>
-                <a href="#tools" class="nav-btn">Tools</a>
+                <a href="#Services" class="nav-btn">Services</a>
+                <a href="#what we do" class="nav-btn"what we do</a>
                 <a href="#contact" class="nav-btn">Contact</a>
             </nav>
         </header>
